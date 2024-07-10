@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Animation</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: #F6F5F2;
+            font-family: Arial, sans-serif;
+            position: relative; /* Added position relative to body */
+        }
+
+        .header {
+            position: absolute;
+            top: 20px; /* Adjust top position as needed */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .header h1 {
+            font-size: 2em;
+            color: darkcyan;
+            font-family: cursive;
+        }
+
+        .container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .dot {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            animation: animate 1s ease-in-out infinite alternate;
+        }
+
+        .dot1 {
+            background: #7BD3EA;
+            animation-delay: -1s;
+        }
+
+        .dot2 {
+            background: #FFD3B6;
+            animation-delay: -0.75s;
+        }
+
+        .dot3 {
+            background: #BED7DC;
+            animation-delay: -0.5s;
+        }
+
+        .dot4 {
+            background: #D9EDBF;
+            animation-delay: -0.25s;
+        }
+
+        .dot5 {
+            background: #E1AFD1; /* Different color for the 5th circle */
+            animation-delay: 0s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Beautiful Circle Animation</h1>
+    </div>
+    <div class="container">
+        <div class="dot dot1"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot3"></div>
+        <div class="dot dot4"></div>
+        <div class="dot dot5"></div>
+    </div>
+</body>
+</html>
